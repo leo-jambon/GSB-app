@@ -1,4 +1,10 @@
 <html><body><center class="body">
+<?php 
+if(!isset($_SESSION)){
+    session_start();
+}
+?>
+
 <table class="autourlogin" id ='imgback'>
 <tr ><td>
 <form action="connexion.php" method="post" >
@@ -10,7 +16,11 @@
  
     <tr class="test2"><td>
     <input type="submit" name="connexion" value="Connexion" class="connexion" />
-    <br /><br /><center><a href="url">Pas de compte ? Inscris-toi</a></center>
+    <br /><br />
+    <center>
+    <input type="text" name="captcha"/>
+    <img src="image.php" onclick="this.src='image.php?' + Math.random();" alt="captcha" style="cursor:pointer;">
+    </center>
 </form></td></tr>
 </table>
 </center></body></html>
@@ -21,7 +31,7 @@ html, body {
 }
 
 body {
-    background: linear-gradient(-45deg, #2ECCFA, #3ADF00, #0040FF, #23d5ab);
+    background: linear-gradient(-45deg, #2ECCFA, #666C6A, #4877D4, #23d5ab);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
 }
