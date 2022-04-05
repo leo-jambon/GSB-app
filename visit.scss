@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+html {
+    box-sizing         : border-box;
+    font-size          : 18px;
+    --bleu1            : rgb(195, 228, 255);
+    --bleu2            : rgb(149, 207, 255);
+    --bleu3            : rgb(110, 190, 255);
+    --bleu4            : rgb(86, 165, 255);
+    --blanc1           : rgb(220, 239, 255);
+    --blancTransparent1: rgba(220, 239, 255, .7);
+    --bleuFonce        : rgb(20, 61, 126);
+    --bleuMoyen        : rgb(86, 165, 255);
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+    margin     : 0;
+    padding    : 0;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height   : auto;
+}
+
+header {
+    background-color: #2F80ED;
+    background      : #56CCF2;
+    /* fallback for old browsers */
+    background      : -webkit-linear-gradient(to top, #2F80ED, #56CCF2);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background      : linear-gradient(to top, #2F80ED, #56CCF2);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    text-align   : center;
+    border-bottom: solid 1px black;
+}
+
+#main-logo {
+    max-width            : 200px;
+    align-self           : center;
+    cursor               : pointer;
+    justify-content      : center;
+    border-radius        : 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius   : 10px;
+    -ms-border-radius    : 10px;
+    -o-border-radius     : 10px;
+}
+
+.mini-logo {
+    height: 20px;
+
+}
+
+nav li {
+
+    justify-content: center;
+    text-align     : center;
+    display        : inline-block;
+
+}
+
+nav a {
+    margin          : 4px;
+    text-transform  : uppercase;
+    padding         : 8px;
+    color           : white;
+    display         : inline-block;
+    border-radius   : 10px;
+    cursor          : pointer;
+    background-color: var(--bleuMoyen);
+    border          : solid 1px var(--bleuMoyen);
+
+    -webkit-border-radius: 10px;
+    -moz-border-radius   : 10px;
+    -ms-border-radius    : 10px;
+    -o-border-radius     : 10px;
+    box-shadow           : rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+
+    &:hover {
+        background-color: #4457ff;
+    }
+}
+
+
+
+nav a:hover {
+
+    & #logo1 {
+        animation        : pulse 1s infinite;
+        -webkit-animation: pulse 1s linear infinite;
+    }
+
+    & #logo2 {
+        animation        : hang 1s infinite;
+        -webkit-animation: hang 1s infinite;
+    }
+
+    & #logo3 {
+        animation        : wobble-vertical 1s infinite;
+        -webkit-animation: wobble-vertical 1s infinite;
+    }
+
+    & #logo4 {
+        animation        : wobble-horizontal 1s infinite;
+        -webkit-animation: wobble-horizontal 1s infinite;
+    }
+}
+
+.main {
+
+   background-image     : url(https://u-paris.fr/wp-content/uploads/2019/02/Sans-titre-74-min.jpg);
+   background-size      : cover;
+   background-blend-mode: color;
+   background-color     : rgba(0, 0, 0, .5);
+    justify-content : center;
+    align-content   : center;
+    align-items     : center;
+    text-align      : center;
+    min-height      : 100vh;
+    padding: 40px;
+
+
+}
+
+.card {
+    margin            : 20px;
+    background-color     : var(--blancTransparent1);
+    padding: 30px;
+  
+    border-radius        : 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius   : 10px;
+    -ms-border-radius    : 10px;
+    -o-border-radius     : 10px;
+    box-shadow           : rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+input, select, button{
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+input:hover, select:hover{
+    background-color: var(--bleu1);
+}
+
+.button_valider{
+    border: solid 1px black;
+    padding: 4px;
+    font-size: 18px;
+    width: 100px;
+    
+    background-color: white;
+    cursor: pointer;
+}
+.raise:hover,
+.raise:focus {
+  box-shadow: 0 1em 0.5em -0.4em var(--bleuMoyen);
+  transform: translateY(-0.25em);
+  background-color: var(--bleuFonce);
+  color: white;
+  
+}
+

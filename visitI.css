@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 16px;
+  --bleu1: rgb(195, 228, 255);
+  --bleu2: rgb(149, 207, 255);
+  --bleu3: rgb(110, 190, 255);
+  --bleu4: rgb(86, 165, 255);
+  --blanc1: rgb(220, 239, 255);
+  --blancTransparent1: rgba(220, 239, 255, .5);
+  --bleuFonce: rgb(20, 61, 126);
+  --bleuMoyen: rgb(86, 165, 255);
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  font-family: 'Roboto', sans-serif;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+header {
+  background-color: #0082c8;
+  text-align: center;
+  border-bottom: solid 1px black;
+}
+
+#main-logo {
+  max-width: 200px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.mini-logo {
+  height: 20px;
+}
+
+nav li {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  display: inline-block;
+}
+
+nav a {
+  text-transform: uppercase;
+  padding: 8px;
+  color: white;
+  display: inline-block;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: var(--bleuMoyen);
+  border: solid 1px var(--bleuMoyen);
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+nav a:hover #logo1 {
+  animation: pulse 1s infinite;
+  -webkit-animation: pulse 1s linear infinite;
+}
+
+nav a:hover #logo2 {
+  animation: hang 1s infinite;
+  -webkit-animation: hang 1s infinite;
+}
+
+nav a:hover #logo3 {
+  animation: wobble-vertical 1s infinite;
+  -webkit-animation: wobble-vertical 1s infinite;
+}
+
+nav a:hover #logo4 {
+  animation: wobble-horizontal 1s infinite;
+  -webkit-animation: wobble-horizontal 1s infinite;
+}
+/*# sourceMappingURL=visit.css.map */
