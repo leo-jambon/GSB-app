@@ -27,8 +27,8 @@ if(!isset($_SESSION)){
             <ul>
                 <li>
 
-                    <a href = 'accueil.php' class="raise"><img id="logo1" class="mini-logo" src="images/desktop.svg">Acceuil</a>
-                    <a href = 'insertion.php'><img id="logo2" class="mini-logo" src="images/clipboard.svg">Remplir une fiche de frais</a>
+                    <a href = 'accueil' class="raise"><img id="logo1" class="mini-logo" src="images/desktop.svg">Acceuil</a>
+                    <a href = 'insertion'><img id="logo2" class="mini-logo" src="images/clipboard.svg">Remplir une fiche de frais</a>
                     
                     <?php 
                    if($_SESSION['rang'] == 0){

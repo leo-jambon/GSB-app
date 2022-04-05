@@ -12,10 +12,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
     
     
-    $dsn = 'mysql:host=mysql-ludovicdemoustier.alwaysdata.net; dbname=ludovicdemoustier_gsb; port=3306; charset=utf8';
+    $dsn = 'mysql:host=localhost; dbname=test1; port=3306; charset=utf8';
     
     try {
-        $pdo = new PDO($dsn, '240000_ludo' , 'Testtest11');
+        $pdo = new PDO($dsn, 'root' , '');
     }
     catch (PDOException $exception) {
         exit('Erreur de connexion à la base de données');
@@ -142,7 +142,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 
 <body>
-    <a href ="../accueil.php"><button  style = "top:2% ; left:2%; position:absolute">X</button></a>
+    
         
 
         

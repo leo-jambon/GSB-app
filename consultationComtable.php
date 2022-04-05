@@ -6,14 +6,14 @@ include 'bar.php';
 
 
 <?php
-
+include 'bar.php';
 if(!isset($_SESSION)){
     session_start();
 }
-$dsn = 'mysql:host=mysql-ludovicdemoustier.alwaysdata.net; dbname=ludovicdemoustier_gsb; port=3306; charset=utf8';
+$dsn = 'mysql:host=localhost; dbname=test1; port=3306; charset=utf8';
 
 try {
-    $pdo = new PDO($dsn, '240000_ludo' , 'Testtest11');
+    $pdo = new PDO($dsn, 'root' , '');
 }
 catch (PDOException $exception) {
     exit('Erreur de connexion à la base de données');
@@ -196,14 +196,14 @@ for($nbrquantite =4;count($quantite) >= $nbrquantite;$nbrquantite = $nbrquantite
       <td><button name ="button" type="submit" value="'.$nbrquantite.'">supprimer</button></td>
 <tr>';
   if($etat2[$i] == 'valide'){
-      echo'<td><button  style="background-color:green"  name ="buttonconfirme" type="submit" value="'.($nbrquantite).'">confirmer</button></td>';
+      echo'<td><button  class="button is-success"  name ="buttonconfirme" type="submit" value="'.($nbrquantite).'">confirmer</button></td>';
   }
   else{
       echo'<td><button class="button" name ="buttonconfirme" type="submit" value="'.($nbrquantite).'">confirmer</button></td>';
   }
   
   if($etat2[$i] == 'refus'){
-      echo'<td><button style="background-color:red" name ="buttonrefuse" type="submit" value="'.($nbrquantite).'">refuser</button></td>';
+      echo'<td><button class="button is-danger" name ="buttonrefuse" type="submit" value="'.($nbrquantite).'">refuser</button></td>';
   }
   else{
       echo'<td><button class="button" name ="buttonrefuse" type="submit" value="'.($nbrquantite).'">refuser</button></td>';
@@ -263,14 +263,14 @@ for($nbrquantite =4;count($quantite) >= $nbrquantite;$nbrquantite = $nbrquantite
       <form action="consultationComtable.php" method="post">
       <td><button class="button" name ="button2" type="submit" value="'.$nbrquantite2.'">supprimer</button></td>';
       if($etat[$nbrquantite2] == 'valide'){
-          echo'<td><button  style="background-color:green"  name ="buttonconfirme2" type="submit" value="'.$nbrquantite2.'">confirmer</button></td>';
+          echo'<td><button  class="button is-success"  name ="buttonconfirme2" type="submit" value="'.$nbrquantite2.'">confirmer</button></td>';
       }
       else{
           echo'<td><button class="button" name ="buttonconfirme2" type="submit" value="'.$nbrquantite2.'">confirmer</button></td>';
       }
       
       if($etat[$nbrquantite2] == 'refus'){
-          echo'<td><button style="background-color:red" name ="buttonrefuse2" type="submit" value="'.$nbrquantite2.'">refuser</button></td>';
+          echo'<td><button class="button is-danger" name ="buttonrefuse2" type="submit" value="'.$nbrquantite2.'">refuser</button></td>';
       }
       else{
           echo'<td><button class="button" name ="buttonrefuse2" type="submit" value="'.$nbrquantite2.'">refuser</button></td>';
@@ -293,7 +293,7 @@ for($nbrquantite =4;count($quantite) >= $nbrquantite;$nbrquantite = $nbrquantite
 ?>
 
 
-<a href ="../accueil.php"><button  style = "top:2% ; left:2%; position:absolute">X</button></a>
+
 
 
 </body>

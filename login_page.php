@@ -19,9 +19,6 @@
 
 <body>
 
-<a href ="../accueil.php"><button  style = "top:2% ; left:2%; position:absolute">X</button></a>
-<p style = "top:3% ; left:2%; position:absolute;color : white">client - login : dandre , mdp : oppg5</br>comtable - login : ltusseau , mdp : ktp3s</p>
-
 <?php 
 if(isset($_SESSION)){
     session_destroy();

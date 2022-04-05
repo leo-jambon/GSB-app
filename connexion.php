@@ -13,14 +13,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
 $_SESSION['prenom'] = $_POST['pseudo'];
 $_SESSION['mdp'] = $_POST['mdp'];
-
-$dsn = 'mysql:host=mysql-ludovicdemoustier.alwaysdata.net; dbname=ludovicdemoustier_gsb; port=3306; charset=utf8';
+$dsn = 'mysql:host=localhost; dbname=test1; port=3306; charset=utf8';
 
 try {
-$pdo = new PDO($dsn, '240000_ludo' , 'Testtest11');
+$pdo = new PDO($dsn, 'root' , '');
 }
 catch (PDOException $exception) {
-exit('Erreur de connexion à la base de données');
+ mail('fauxmail@votremail.com', 'PDOException', $exception->getMessage());
+ exit('Erreur de connexion à la base de données');
 }
 
 // Requête pour tester la connexion
